@@ -1,4 +1,5 @@
-let petProfileController = require('../route/petProfileController');
+let petProfileController = require('../controller/petProfileController');
+let User = require('../model/user');
 
 // Output to the log that the module is loaded successfully
 console.log("[userController] initialized");

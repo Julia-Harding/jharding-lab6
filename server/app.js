@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+var bodyParser = require('body-parser')
+
 // Include the userRoutes module
 let userRoute = require('./route/userRoute');
 app.use('/api/user', userRoute);
