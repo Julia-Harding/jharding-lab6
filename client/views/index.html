@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<!-- META currently contains my imported font -->
+
+<meta>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+</meta>
+
+<!-- Title and CSS -->
+
+<head>
+    <title>Paw and Purr</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<header>
+    <div class="logo">
+        <!-- Broken image link rn will fix later-->
+        <a href="/"><img src="../imgsfef/1.jpg"></a>
+    </div>
+</header>
+
+<nav>
+    <div id="navigation">
+        <li>
+            <ul><a href="about">About</a></ul>
+            <ul><a href="/index.html">Index</a></ul>
+            <ul><a href="/index.html">Index</a></ul>
+        </li>
+    </div>
+</nav>
+
+<body>
+
+    <!-- OUTER contains the animation div, and the INNER div (form div) -->
+
+    <div class="outer">
+
+        <!-- ANIMATION div contains the images, and helps them move -->
+
+        <div class="animation">
+
+            <!-- These are the images, they are in individual divs, so that they are displayed like a list -->
+
+            <div class="petpic">
+                <img src="/img/1.jpg">
+            </div>
+            <div class="petpic">
+                <img src="/img/2.jpg">
+            </div>
+            <div class="petpic">
+                <img src="/img/3.jpg">
+            </div>
+            <div class="petpic">
+                <img src="/img/4.jpg">
+            </div>
+            <div class="petpic">
+                <img src="/img/5.jpg">
+            </div>
+            <div class="petpic">
+                <img src="/img/6.jpg">
+            </div>
+            <div class="petpic">
+                <img src="/img/7.jpg">
+            </div>
+            <div class="petpic">
+                <img src="/img/8.jpg">
+            </div>
+            <div class="petpic">
+                <img src="/img/9.jpg">
+            </div>
+        </div>
+
+        <!-- This is the INNER div inside the OUTER div, allows the inner div to lay on top -->
+
+        <div class="inner">
+
+            <!-- The INNER div contains the form -->
+
+
+
+            <!-- The form is inside a container for style purposes -->
+
+            <div class="container">
+
+                <form>
+                    <h1>Sign Up</h1>
+                    <br></br>
+                    <h2>Make a Pawsome connection today!</h2>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Provide email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="text" placeholder="Create password" name="psw" required>
+
+                    <label for="psw-repeat"><b>Confirm Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    </label>
+
+                    <div class="clearfix">
+                        <button type="button" id="mybutton" class="cancelbtn">Cancel</button>
+                        <button type="submit" id="mybutton" class="signupbtn">Sign Up</button>
+                    </div>
+
+                </form>
+
+                <a href onclick="document.getElementById('id01').style.display='block'">Already have an account? Click
+                    here!</a>
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- The Modal -->
+
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+
+        <!-- Modal Content -->
+        <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+                <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="text" placeholder="Enter password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+    <!-- Links the JS file (currently link does not work) -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "jhardinglab6",
+  "version": "1.0.0",
+  "description": "actually its lab 6 but idk how to change it",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "jharding-lab6"
+  },
+  "author": "julia harding",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "lab",
+    "6"
+  ]
+}

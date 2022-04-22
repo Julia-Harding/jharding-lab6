@@ -1,0 +1,253 @@
+*  {margin: 0; padding: 0;}
+
+/* This allows the divs to be layered one on top of the other */
+/*The outer div contains the inner div, the inner div contains the sign up form */
+
+header {
+    position: absolute;
+    top: 0px;
+    height: 200px;
+    width: 30%;
+    background-color: pink;
+}
+
+nav {
+    position: absolute;
+    top: 200px;
+    bottom:0;
+    width: 30%;
+    font-family: 'Righteous';
+    font-size: 70px;
+    background-color: pink;
+
+}
+
+li {
+    position: relative;
+    top: 30px;
+    left: 50px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+.about {
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    right:0;
+    background-color: #b3d2e6;
+    font-family: 'Righteous';
+    font-size: 40px;
+}
+
+.outer {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 70%;
+}
+
+/* These are the individual images */
+
+.petpic {
+    margin-top: -10px;
+    float: center;
+    overflow: hidden;
+    -moz-animation: marquee 45s linear infinite;
+    -webkit-animation: marquee 45s linear infinite;
+    animation: marquee 45s linear infinite;
+}
+
+.profile {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -10px;
+    width: 100%;
+}
+
+.inner {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+/* This is the div for the whole animation */
+/* This is the marquee */
+
+.animation {
+    width: 100%;
+    animation: marquee 45s linear infinite;
+    white-space: nowrap;
+}
+
+img {
+    width: 100%;
+}
+
+/*
+
+@-moz-keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, -100%);
+    }
+}
+
+@-webkit-keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, -100%);
+    }
+}
+
+*/
+
+@keyframes marquee {
+    0% {
+        -moz-transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+
+    }
+    100% {
+        -moz-transform: translate(0, -100%);
+        -webkit-transform: translate(0, -100%);
+        transform: translate(0, -100%);
+    }
+}
+
+/* THE FORM */
+
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Container style */
+.container {
+    position: absolute;
+    float: center;
+    height: 95vh;
+    width: 500px;
+    background-color: rgba(61, 25, 75, 0.5);
+    color: #fff;
+    font-family: 'Righteous', cursive;
+    padding: 16px;
+}
+
+/* Style for both buttons */
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+/* Extra style for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* THE MODAL */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
