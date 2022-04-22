@@ -1,11 +1,11 @@
-// Include the userRoutes module
-let userRoute = require('./route/userRoute');
-app.use('/api/user', userRoutes);
-
-let petProfileRoute = require('.route/petProfileRoute');
-
 const express = require('express');
 const app = express();
+
+// Include the userRoutes module
+let userRoute = require('./route/userRoute');
+app.use('/api/user', userRoute);
+
+let petProfileRoute = require('./route/petProfileRoute');
 
 // Troubleshooting
 // app.use(express.static('client/views'));
