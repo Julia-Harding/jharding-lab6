@@ -1,5 +1,6 @@
 let petProfileController = require('../controller/petProfileController');
 let User = require('../model/user');
+let Pet = require('../model/user');
 
 // Output to the log that the module is loaded successfully
 console.log("[userController] initialized");
@@ -12,7 +13,6 @@ let brian = User.createUser("Brian", "Gormanly");
 let julia = User.createUser("Julia", "Harding");
 let colin = User.createUser("Colin", "Kelly");
 let eleanor = User.createUser("Eleanor", "Rossini");
-
 
 // add the user to the array
 users.push(brian);
