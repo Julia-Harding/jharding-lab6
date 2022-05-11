@@ -1,9 +1,9 @@
+// Output to the log that the module is loaded successfully
+console.log("[userController] initialized");
+
 let petProfileController = require('../controller/petProfileController');
 let User = require('../model/user');
 let Pet = require('../model/user');
-
-// Output to the log that the module is loaded successfully
-console.log("[userController] initialized");
 
 // create an array to hold the created users
 let users = [];
@@ -37,5 +37,13 @@ exports.saveUser = ( req, res ) => {
     let newUser = User.createUser( req.body.firstName, req.body.lastName );
     users.push( newUser );
     res.setHeader( 'Content-Type', 'application/json' );
+    res.send( users );
+}
+
+// delete a user
+exports.deleteUser = ( req, res ) => {
+    res.setHeader( 'Content-Type', 'application/json' );
+    console.log(req.params.param2);
+    users[ req.params.index ] = "Deleted";
     res.send( users );
 }
