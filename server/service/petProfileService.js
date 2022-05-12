@@ -1,9 +1,9 @@
 // Output to the log that the module is loaded successfully
 console.log("[petProfileService] initialized");
 
-const Pet = reqire('../model/petProfile');
+const Pet = require('../model/petProfile');
 
-const { Pool, Client } = reqire( 'pg' );
+const { Pool, Client } = require( 'pg' );
 
 const pool = new Pool( {
     user: 's22',
@@ -13,15 +13,15 @@ const pool = new Pool( {
     port: 5432,
 });
 
-exports.savePet = async (post) => {
-    let sqlText = "INSERT INTO pets (petName, petSex, petAge, petType) ('" + Pet.petName + "', '" + pet.petSex + "', '" + pet.petAge + "', '" + petType + "');";
+exports.savePetProfile = async (petProfile) => {
+    let sqlText = "INSERT INTO pets (petName, petSex, petAge, petType) ('" + Pet.petName + "', '" + Pet.petSex + "', '" + Pet.petAge + "', '" + Pet.petType + "');";
 
     let res = await pool.query( sqlText );
     return true;
 }
 
 exports.getPetById = async ( petId ) => {
-    let sqlText = "SELECT * FROM posts WHERE id = " + petID + ";";
+    let sqlText = "SELECT * FROM petProfiles WHERE id = " + petID + ";";
 
     let res = await pool.query(sqlText);
     if(res.rowCount > 0) {

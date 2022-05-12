@@ -2,7 +2,7 @@
 console.log("[petProfileController] initialized");
 
 let Pet = require("../model/petProfile");
-let postService = require('../service/petProfileService');
+let petProfiles = require('../service/petProfileService');
 
 //pet array
 let pets =[];
@@ -19,35 +19,35 @@ pets.push(paddington);
 pets.push(archie);
 pets.push(bailey);
 
-// save pet with post Service
+// save pet with petProfile Service
 petService.savePet(mittens);
 petService.savePet(paddington);
 petService.savePet(archie);
 petService.savePet(bailey);
 
-// send entire posts array as body of the response as json
+// send entire Pets array as body of the response as json
 exports.getAllPets = async ( req, res ) => {
     res.setHeader( 'Content-Type', 'application/json' );
     let pets = await petService.getAllPets();
     console.log(" 2: " + pets );
-    res.send( JSON.stringify( posts ));
+    res.send( JSON.stringify( petProfles ));
 }
 
-// retrieve the post int he index parameter of the request and return asn json
+// retrieve the Pets int he index parameter of the request and return asn json
 exports.getPets = async ( req, res ) => {
     res.setHeader( 'Content-Type', 'application/json' );
     res.send( pets[ req.params.index ] );
 }
 
-// this is a stub to replace the use of getAllPosts for the feed, once users are included
+// this is a stub to replace the use of getPets for the feed, once users are included
 exports.getPetForUser = ( req, res ) => {
     res.setHeader( 'Content-Type', 'application/json' );
-    // posts for a user
+    // petProfiles for a user
     res.send( null );
 }
 
 // save a pet :D
 exports.savePet = async ( req, res ) => {
-    let newPet = Pet.createPet( req.body.petName, req.petSex, req.petAge, req.petType);
-    posts.push( newPost );
+    let newPetProfile = Pet.createPet( req.body.petName, req.petSex, req.petAge, req.petType);
+    petProfiles.push( newPetProfile );
 }
