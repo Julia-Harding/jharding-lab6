@@ -3,7 +3,15 @@ console.log("[petProfileService] initialized");
 
 const Pet = reqire('../model/petProfile');
 
-// const { Pool, Client } = reqire( 'pg' ); WORK ON THIS LATER
+const { Pool, Client } = reqire( 'pg' );
+
+const pool = new Pool( {
+    user: 's22',
+    host: 'localhost',
+    database: 's22',
+    password: 's22',
+    port: 5432,
+});
 
 exports.savePet = async (post) => {
     let sqlText = "INSERT INTO pets (petName, petSex, petAge, petType) ('" + Pet.petName + "', '" + pet.petSex + "', '" + pet.petAge + "', '" + petType + "');";

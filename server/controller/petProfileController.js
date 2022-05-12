@@ -48,6 +48,6 @@ exports.getPetForUser = ( req, res ) => {
 
 // save a pet :D
 exports.savePet = async ( req, res ) => {
-    let newPet = Pet.createPet(); //EDIT LATER req.body.title, req.body.description);
+    let newPet = Pet.createPet( req.body.petName, req.petSex, req.petAge, req.petType);
     posts.push( newPost );
 }
