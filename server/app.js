@@ -20,6 +20,10 @@ app.get('/about', function (req,res) {
 	res.sendFile('about.html', {root: './client/views' })
 })
 
+app.get('/signin', function (req,res) {
+	res.sendFile('signin.html', {root: './client/views'})
+})
+
 // open up the resources publically 
 app.use(express.static('client/public'));
 

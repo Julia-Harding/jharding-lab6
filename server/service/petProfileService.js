@@ -5,13 +5,18 @@ const Pet = require('../model/petProfile');
 
 const { Pool, Client } = require( 'pg' );
 
-const pool = new Pool( {
-    user: 's22',
-    host: 'localhost',
-    database: 's22',
-    password: 's22',
-    port: 5432,
-});
+// const pool = new Pool( {
+//     user: 's22',
+//     host: 'localhost',
+//     database: 's22',
+//     password: 's22',
+//     port: 5432,
+// });
+
+pool.query( 'SELECT NOW()', (err, res) => {
+    console.log(err, res);
+    pool.end();
+})
 
 exports.savePetProfile = async (petProfile) => {
     let sqlText = "INSERT INTO pets (petName, petSex, petAge, petType) ('" + Pet.petName + "', '" + Pet.petSex + "', '" + Pet.petAge + "', '" + Pet.petType + "');";

@@ -20,10 +20,10 @@ pets.push(archie);
 pets.push(bailey);
 
 // save pet with petProfile Service
-petService.savePet(mittens);
-petService.savePet(paddington);
-petService.savePet(archie);
-petService.savePet(bailey);
+petProfiles.savePetProfile(mittens);
+petProfiles.savePetProfile(paddington);
+petProfiles.savePetProfile(archie);
+petProfiles.savePetProfile(bailey);
 
 // send entire Pets array as body of the response as json
 exports.getAllPets = async ( req, res ) => {
