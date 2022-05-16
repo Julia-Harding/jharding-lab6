@@ -56,8 +56,8 @@ My dog, Sir Paddington Bear, is fortunate to live in a very dog friendly state. 
 the street from our apartment there's a park, in the evenings lots of people stop by after 
 work to bring their pets out for socialization.
 
-Except for snack time, Paddington in his brightest mood when we're hanging out all his 
-other puppy friends.
+Except for snack time, Paddington in his brightest mood when we're hanging out with all 
+his other puppy friends.
 
 Not all pets have the privilege of living in a pet friendly neighborhood. Socialization 
 can be challenging to organize. Paw and Purr makes it easier, designed similarly to 
@@ -85,7 +85,7 @@ from Unsplash. I learned how marquees work, and how to replicate the function us
 so that I could create a scrolling carousel of animal images.
 
 I understood conceptually what I learned in class, but it was very difficult to translate 
-that to actual programming. In the section DEVELOPMENT notes, I'll detail what works, and 
+that to actual programming. In the section DEVELOPMENT NOTES, I'll detail what works, and 
 what needs improvement.
 
 ------------------------------------------------------------------------------------------
@@ -104,7 +104,7 @@ npm install (drag and drop the folder from your folder organizer for the correct
 node server/app.js
 
 This will update in the console that Marist Chatter is listening on port 1337!
-I will also show in the console that the correct server side files are initialized.
+It will also show in the console that the correct server side files are initialized.
 
 ------------------------------------------------------------------------------------------
 
@@ -114,7 +114,7 @@ The index page, and the css work. The carousel loops an empty space at the end o
 cycle, I was not able to deduct why that happens. The body parser works correctly, you 
 can POST and display new users, or the users as a list. The fetch API should work.
 
-The pg node-module is causing an error that terminates the connection the server 1337.
+The pg node-module is causing an error that terminates the connection to the server 1337.
 It is located in the module at /node_modules/pg/lib/client.js:132:73
 I could not find an effective solution online, and can no longer maintain the connection 
 to the port. This prevents me from being able to properly view the client side html.
@@ -152,6 +152,8 @@ To be noted as a secure or trusted user, you could approve options for backgroun
 and submit vaccination cards of your pets.
 
 An additional page could show upcoming events organized by Paw and Purr that are open to 
-all local users, or by your community that are pet friendly, or pet oriented. Regular 
-users cannot post to this page, only verified representatives of your area. This decision 
-protects users and pets from dangerous environments that might not be safe or honest.
+all local users, or by your community that are pet friendly, or pet oriented.
+
+Regular users cannot post to this page, only verified representatives of your area. This 
+decision protects users and pets from dangerous environments that might not be safe or 
+secure/honest.
