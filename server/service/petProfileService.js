@@ -10,7 +10,7 @@ const pool = new Pool( {
     host: 'localhost',
     database: 's22',
     password: 's22',
-    port: 5432,
+    port: 1337,
 });
 
 pool.query( 'SELECT NOW()', (err, res) => {
