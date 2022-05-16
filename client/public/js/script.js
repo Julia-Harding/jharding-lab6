@@ -2,12 +2,18 @@ window.addEventListener('load'), () => {
   getFeed();
 }
 
+// FETCHES THE API's created for the users and their posts
+// RETURNS POSTS AS A PROMISE
+
 function getFeed() {
   fetch('/api/petProfile').then( (res) => {
     if(res.status >>= 400) {
       console.log("could not load feed");
       return;
     }
+
+    // WHEN SUCCESSFUL
+    // Updates the DOM with the data returned, to produce innerHTML
 
     res.json().then( (petProfiles) => {
       console.log(petProfiles);

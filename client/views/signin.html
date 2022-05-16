@@ -12,7 +12,7 @@
 
 <header>
     <div class="logo">
-        <!-- Broken image link rn will fix later-->
+        <!-- no image link rn will fix later-->
         <a href="/"><img src="../imgsfef/1.jpg"></a>
     </div>
 </header>
@@ -30,6 +30,11 @@
 <body>
 
     <!-- SIGN INTO USER -->
+
+    <!-- Couldn't figure out how clicking the correct user could prompt this,
+        so right now they are included on the same page 
+        maybe with more DOM inner HTML, I'm not sure...-->
+
     <div class="outer">
         <h1>Sign In!</h1>
         <h3>Enter your username and password</h3>
@@ -43,7 +48,18 @@
         </form>
     </div>
 
-    <!-- DONT THINK ABOUT THE WEIRD UI - LIST OF USERS YOU CAN CLICK ON -->
+    <!-- LIST OF USERS YOU CAN CLICK ON -->
+
+    <!-- I do not understand what to incluide in the <a> tag to link to the correct user page.
+        I know how to do it when I'm getting there manually - specifically when 1337 connects 
+        HOWEVER, when I installed the pg node module, I started getting an error,
+
+        "Error: Connection terminated unexpectedly"
+
+        It comes from within the module /node_modules/pg/lib/client.js:132
+        const error = this._ending ? new Error('Connection terminated') : new Error('Connection terminated unexpectedly')
+        char 73 (n)ew seems to be the problem, but I could not find a solution. Now the server cannot connect, therefore I cannot debug.
+        -->
     <li>
         <ul><a href="">Brian Gormanly</a></ul>
         <ul><a href="">Julia Harding</a></ul>
